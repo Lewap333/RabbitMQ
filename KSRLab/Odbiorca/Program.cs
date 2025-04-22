@@ -46,7 +46,7 @@ namespace Odbiorca
 
                 var odbiorca = new MyConsumer(channel);
 
-                channel.BasicConsume("message_queue", false, odbiorca);
+                channel.BasicConsume("message_queue", true, odbiorca);
 
                 Console.WriteLine("Odbiorca nasłuchuje na wiadomości");
                 Console.ReadKey();
